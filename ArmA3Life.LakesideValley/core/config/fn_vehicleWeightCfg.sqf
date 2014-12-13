@@ -11,6 +11,18 @@ _className = [_this,0,"",[""]] call BIS_fnc_param;
 switch (_className) do
 {
 
+	// Boats
+	case "A3L_Ship": {100};
+	case "A3L_Jetski_yellow": {2};
+	case "A3L_Jetski": {2};
+	
+	// cars
+	case "A3L_Veyron": {25};
+	case "A3L_Veyron_red": {25};
+	case "A3L_Veyron_black": {25};
+	case "A3L_Veyron_white": {25};
+	case "A3L_Veyron_orange": {25};
+
 	case "S_Rangerover_Black": {25};
 	case "S_Rangerover_Red": {25};
 	case "S_Rangerover_Blue": {25};
@@ -19,6 +31,11 @@ switch (_className) do
 	case "S_Rangerover_Grey": {25};
 	case "S_Rangerover_Orange": {25};
 	case "S_Rangerover_White": {25};
+	
+	case "A3L_RX7_Blue": {25};
+	case "A3L_RX7_Red": {25};
+	case "A3L_RX7_White": {25};
+	case "A3L_RX7_Black": {25};
 	
 	case "S_Vantage_Red": {25};
 	case "S_Vantage_Blue": {25};
@@ -66,7 +83,7 @@ switch (_className) do
 	case "IVORY_R8": {25};
 	case "IVORY_PRIUS": {25};
 	case "A3L_M3": {25};
-
+	case "A3L_EvoXFPBLBSO": {25};
 
 
 	case "A3L_GrandCaravanUC": {25};

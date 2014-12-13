@@ -21,10 +21,6 @@ _staminatext = parseText format[""];
 _ammotext = parseText format[""];
 _amountmagtext = parseText format[""];
 _weaponname = parseText format[""];
-_scarytext = parseText format[""];
-_amountcandy = candy;
-_playerscary = scarylevel;
-_scarycolor = "#00FF4C";
 _hudinfo = weaponState player; // ["arifle_MX_ACO_pointer_F","arifle_MX_ACO_pointer_F","Single","30Rnd_65x39_caseless_mag",30]
 _curweapon = _hudinfo select 0;
 _curmagazine = _hudinfo select 4;
@@ -153,17 +149,6 @@ if (_playerhealth < 0.10) then {
                 _healthcolor = "#590000";
                 _healthtext = parseText format["Dead</t>"];
 };};};};};};};};};};
-
-if (life_intox > 0.06) then {
-    _healthcolor = "#1AFF00";
-    _healthtext = parseText format["Buzzed"];
-};
-
-
-if (life_intox > 0.25) then {
-    _healthcolor = "#FF0000";
-    _healthtext = parseText format["Far Gone"];
-};
  
 if (_playerhunger > 90) then {
                 _hungercolor = "#00FF4C";
@@ -272,45 +257,9 @@ if (_playerstamina < 0.10) then {
                 _staminatext = parseText format["I am exhausted"];
 };};};};};};};
  
- if (_playerscary == 0) then {
-                _scarycolor = "#00FF4C";
-                _scarytext = parseText format["Not afraid"];
-        } else {
-        if (_playerscary < 0.2) then {
-                _scarycolor = "#7BFF00";
-                _scarytext = parseText format["a bit afraid"];
-        } else {
-        if (_playerscary < 0.4) then {
-                _scarycolor = "#EAFF00";
-                _scarytext = parseText format["afraid"];
-        } else {
-        if (_playerscary < 0.6) then {
-                _scarycolor = "#FF8400";
-                _scarytext = parseText format["You look scared"];
-        } else {
-        if (_playerscary < 0.8) then {
-                _scarycolor = "#FF4000";
-                _scarytext = parseText format["Heart is pounding"];
-        } else {
-        if (_playerscary < 1) then {
-                _scarycolor = "#FF0000";
-                _scarytext = parseText format["Heart is pounding hard"];
-        } else {
-        if (_playerscary == 1) then {
-                _scarycolor = "#590000";
-                _scarytext = parseText format["Crying out of fear"];
-};};};};};};};
  
- 
-_candyconvtext = parsetext format [""];
-if (_amountcandy == 0) then {
-_candyconvtext = parseText format ["No candy!"];
-} else {
-_candyconvtext = parseText format ["%1 candy!", _amountcandy];
-};
- 
-_playerstatustext = parseText format ["<t font='EtelkaNarrowMediumPro' size='1' align='right'><t color='%1'>%2</t> | <t color='%3'>%4</t> | <t color='%5'>%6</t> | <t color='%7'>%8</t> | <t color='%9'>%10</t></t>", _healthcolor, _healthtext, _staminacolor, _staminatext, _hungercolor, _hungertext, _thirstcolor, _thirsttext, _scarycolor, _scarytext];
-_playernametext = parseText format ["<t font='EtelkaNarrowMediumPro' color='#FFFFFF' size='1.3' align='right'>%1 || %2</t>", _nameofplayer, _candyconvtext];
+_playerstatustext = parseText format ["<t font='EtelkaNarrowMediumPro' size='1' align='right'><t color='%1'>%2</t> | <t color='%3'>%4</t> | <t color='%5'>%6</t> | <t color='%7'>%8</t></t>", _healthcolor, _healthtext, _staminacolor, _staminatext, _hungercolor, _hungertext, _thirstcolor, _thirsttext];
+_playernametext = parseText format ["<t font='EtelkaNarrowMediumPro' color='#FFFFFF' size='1.3' align='right'>%1</t>", _nameofplayer];
 // _zeroinghudtext = parseText format ["<t font='EtelkaNarrowMediumPro' color='#949494' size='1' align='left'>%1</t>", _zeroingtext];
 _ammohudtext = parseText format ["<t font='EtelkaNarrowMediumPro' color='%1' size='0.9' align='left'>%2</t>",_ammocolor, _ammotext];
 _maghudtext = parseText format ["<t font='EtelkaNarrowMediumPro' color='%1' size='1' align='left'>%2</t>", _magcolor, _amountmagtext];

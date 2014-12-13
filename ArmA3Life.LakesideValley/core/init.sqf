@@ -19,6 +19,7 @@ A3L_RunCode = compileFinal "
 [] execVM "A3L_Stuff\jailsystem.sqf";
 [] execVM "A3L_Stuff\bank.sqf";
 [] execVM "A3L_Stuff\halloween.sqf";
+[] execVM "A3L_Stuff\hunting.sqf";
 
 // Needs to be removed after halloween
 candy = 0;

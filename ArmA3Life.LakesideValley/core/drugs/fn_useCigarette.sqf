@@ -10,7 +10,7 @@ private["_smoke"];
 
 [[0,format["%1 enjoys a smooth, refreshing Rax Cigarette.",name player]],"life_fnc_broadcast",(position player) nearEntities [["Man"], 50],false] spawn life_fnc_MP;
 
-_smoke = "SmokeShell" createVehicle position player;
+_smoke = "SmokeShell" createVehicleLocal position player;
 if (vehicle player != player) then
 {
     _smoke attachTo [vehicle player, [-0.6,-1,0]];

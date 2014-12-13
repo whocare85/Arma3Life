@@ -24,7 +24,7 @@ life_bail_paid = false;
 life_impound_inuse = false;
 life_action_inUse = false;
 life_spikestrip = ObjNull;
-life_respawn_timer = 5; //Scaled in minutes
+life_respawn_timer = 7; //Scaled in minutes
 life_knockout = false;
 life_interrupted = false;
 life_respawned = false;
@@ -36,7 +36,7 @@ __CONST__(life_save_yinv,TRUE); //Save Y-Inventory for civs and cops? (Medics ex
 
 //Revive constant variables.
 __CONST__(life_revive_cops,FALSE); //Set to false if you don't want cops to be able to revive downed players.
-__CONST__(life_revive_fee,250); //Fee for players to pay when revived.
+__CONST__(life_revive_fee,3500); //Fee for players to pay when revived.
 
 //House Limit
 __CONST__(life_houseLimit,5); //Maximum amount of houses a player can buy (TODO: Make Tiered licenses).
@@ -88,7 +88,7 @@ switch (playerSide) do
 	case west: 
 	{
 		life_atmcash = 100000; //Starting Bank Money
-		life_paycheck = 1000; //Paycheck Amount
+		life_paycheck = 3500; //Paycheck Amount
 	};
 	case civilian: 
 	{
@@ -98,7 +98,7 @@ switch (playerSide) do
 	
 	case independent: {
 		life_atmcash = 100000;
-		life_paycheck = 10000;
+		life_paycheck = 2500;
 	};
 };
 
@@ -175,6 +175,10 @@ life_inv_items =
 	"life_inv_opiumseeds",
 	"life_inv_cannabisseeds",
 	"life_inv_pumpkinseeds",
+	"life_inv_rawgoatmeat",
+	"life_inv_rawchicken",
+	"life_inv_rawsheepmeat",
+	"life_inv_rawrabbit",
 	//Additions
 	"life_inv_zoobeer", // Duff Beer
 	"life_inv_RoadCone",
@@ -219,7 +223,9 @@ life_licenses =
 	["license_civ_salt","civ"],
 	["license_civ_cement","civ"],
 	["license_med_air","med"],
-	["license_civ_home","civ"]
+	["license_civ_home","civ"],
+	
+	["license_civ_rifle","civ"]
 ];
 
 //Setup License Variables
@@ -227,7 +233,7 @@ life_licenses =
 
 life_dp_points = ["dp_1","dp_2","dp_3","dp_4","dp_5","dp_6","dp_7","dp_8","dp_9","dp_10","dp_11","dp_12","dp_13","dp_14","dp_15","dp_15","dp_16","dp_17","dp_18","dp_19","dp_20","dp_21","dp_22","dp_23","dp_24","dp_25"];
 //[shortVar,reward]
-life_illegal_items = [["heroinu",1200],["heroinp",2500],["cocaine",1500],["cocainep",3500],["marijuana",2000],["turtle",3000],["blastingcharge",10000],["boltcutter",500]];
+life_illegal_items = [["heroinu",1200],["heroinp",2500],["cocaine",1500],["cocainep",3500],["cannabis",2500],["opium",2500],["marijuana",2000],["turtle",3000],["blastingcharge",10000],["boltcutter",500]];
 
 
 /*
@@ -253,7 +259,7 @@ sell_array =
 	["donuts",60],
 	["marijuana",2350],
 	["tbacon",25],
-	["lockpick",75],
+	["lockpick",500],
 	["pickaxe",750],
 	["redgull",200],
 	["peach",55],
@@ -286,6 +292,11 @@ sell_array =
 	["opium seed",150],
 	["cannabis seed",150],
 	["pumpkin seed",50],
+
+	["raw goat meat",500],
+	["raw chicken",700],
+	["raw sheep meat",500],
+	["raw rabbit",700],
 	
 	["spikeStrip",1200],
 	["cement",1950],
@@ -345,6 +356,11 @@ buy_array =
 	["opium seed",400],
 	["cannabis seed",400],
 	["pumpkin seed",150],
+	
+	["raw goat meat",600],
+	["raw chicken",800],
+	["raw sheep meat",600],
+	["raw rabbit",800],
 	
 	["peach",68],
 	["spikeStrip",2500],

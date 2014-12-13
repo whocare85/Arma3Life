@@ -29,13 +29,18 @@ if(visibleMap) then {
 			private["_marker","_unit"];
 			_marker = _x select 0;
 			_unit = _x select 1;
+			
 			if(!isNil "_unit") then
 			{
 				if(!isNull _unit) then
 				{
-					_marker setMarkerPosLocal (visiblePosition _unit);
+					if ("ItemGPS" in assignedItems _unit) then
+					{
+						_marker setMarkerPosLocal (visiblePosition _unit);
+					};
 				};
 			};
+			
 		} foreach _markers;
 		if(!visibleMap) exitWith {};
 		sleep 0.02;
@@ -44,4 +49,4 @@ if(visibleMap) then {
 	{deleteMarkerLocal (_x select 0);} foreach _markers;
 	_markers = [];
 	_cops = [];
-};
+}; 

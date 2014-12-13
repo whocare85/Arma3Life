@@ -78,6 +78,10 @@ switch (_var) do
 	case "life_inv_opiumseeds": {(localize "STR_Item_opiumseeds")};
 	case "life_inv_cannabisseeds": {(localize "STR_Item_cannabisseeds")};
 	case "life_inv_pumpkinseeds": {(localize "STR_Item_Pumpkinseeds")};
+	case "life_inv_rawgoatmeat": {(localize "STR_Item_rawgoatmeat")};
+	case "life_inv_rawchicken": {(localize "STR_Item_rawchicken")};
+	case "life_inv_rawsheepmeat": {(localize "STR_Item_rawsheepmeat")};
+	case "life_inv_rawrabbit": {(localize "STR_Item_rawrabbit")};
 	//Additions
 	case "life_inv_zoobeer": {"Zoo Beer"}; 
 	case "life_inv_RoadConeStripB": {"Blinking RoadCone Strip"};
@@ -115,4 +119,6 @@ switch (_var) do
 	case "license_civ_cement": {(localize "STR_License_Cement")};
 	case "license_med_air": {(localize "STR_License_Pilot")};
 	case "license_civ_home": {(localize "STR_License_Home")};
+	
+	case "license_civ_rifle": {"Rifle License"};
 };

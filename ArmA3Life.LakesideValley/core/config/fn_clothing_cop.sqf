@@ -50,6 +50,7 @@ switch (_filter) do
 			["G_Balaclava_combat",nil,55],
 			["G_Balaclava_lowprofile",nil,55],
 			["A3L_Balaclava",nil,60]
+			
 		];
 	};
 	

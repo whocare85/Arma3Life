@@ -1,10 +1,10 @@
-author = "Tonic - Modified By Arma3Life";
-onLoadName = "ArmA 3 Life 0.3";
-onLoadMission = "A Roleplay mission developed by Tonic";
+author = "A3L Development Team";
+onLoadName = "ArmA 3 Life 0.3.2";
+onLoadMission = "A Roleplay mission developed by ArmA 3 Life";
 loadScreen = "textures\E76_AppleGate_Lake.paa";
 joinUnassigned = 1;
 respawn = BASE;
-respawndelay = 300;
+respawndelay = 5;
 disabledAI = true;
 disableChannels[]={1,2};
 enableDebugConsole = 1;
@@ -14,15 +14,15 @@ class Header
 {
 	gameType = RPG;
 	minPlayers = 1;
-	maxPlayers = 75;
+	maxPlayers = 80;
 };
 
 wreckLimit = 3;
-wreckRemovalMinTime = 60;
-wreckRemovalMaxTime = 320;
+wreckRemovalMinTime = 30;
+wreckRemovalMaxTime = 120;
 corpseLimit = 150;
-corpseRemovalMinTime = 999;
-corpseRemovalMaxTime = 9999;
+corpseRemovalMinTime = 800;
+corpseRemovalMaxTime = 1000;
 
 #include "dialog\MasterHandler.h"
 
@@ -50,6 +50,19 @@ class CfgSounds
 		titles[] = {};
 	};
 	
+	class medicalintro
+	{
+		name = "medicalintro";
+		sound[] = {"\sounds\medicalintro.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	
+	class copintro
+	{
+		name = "copintro";
+		sound[] = {"\sounds\copintro.ogg", 1.0, 1};
+		titles[] = {};
+	};
 	class tazersound
 	{
 		name = "Tazersound";

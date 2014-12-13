@@ -83,6 +83,10 @@ switch (_mode) do
 			case "opium seed": {"life_inv_opiumseeds"};
 			case "cannabis seed": {"life_inv_cannabisseeds"};
 			case "pumpkin seed": {"life_inv_pumpkinseeds"};
+			case "raw goat meat": {"life_inv_rawgoatmeat"};
+			case "raw chicken": {"life_inv_rawchicken"};
+			case "raw sheep meat": {"life_inv_rawsheepmeat"};
+			case "raw rabbit": {"life_inv_rawrabbit"};
 			case "cigarette": {"life_inv_cigarette"};
 			case "RoadConeStripB": {"life_inv_RoadConeStripB"};
 			case "RoadConeB": {"life_inv_RoadConeB"};
@@ -168,6 +172,10 @@ switch (_mode) do
 			case "life_inv_opiumseeds": {"opium seed"};
 			case "life_inv_cannabisseeds": {"cannabis seed"};
 			case "life_inv_pumpkinseeds": {"pumpkin seed"};
+			case "life_inv_rawgoatmeat": {"raw goat meat"};
+			case "life_inv_rawchicken": {"raw chicken"};
+			case "life_inv_rawsheepmeat": {"raw sheep meat"};
+			case "life_inv_rawrabbit": {"raw rabbit"};
 			case "life_inv_zoobeer": {"zoobeer"};
 			case "life_inv_RoadConeStripB": {"RoadConeStripB"};
 			case "life_inv_RoadConeB": {"RoadConeB"};

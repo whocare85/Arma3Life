@@ -36,6 +36,14 @@ life_action_inUse = true;
 	life_action_inUse = false;
 };
 
+//Check if it's a dead body.
+if(_curTarget isKindOf "Man" && {!alive _curTarget} && {playerSide in [west,independent]}) exitWith {
+	//Hotfix code by ins0
+	if(((playerSide == blufor && {(call life_revive_cops)}) || playerSide == independent) && {"Medikit" in (items player)}) then {
+		[_curTarget] call life_fnc_revivePlayer;
+	};
+};
+
 
 if (typeOf _curTarget IN ["A3L_Wheat","A3L_Corn","A3L_Beans","A3L_Cannabis","A3L_Cotton","Ficus_Bush_1","A3L_Pumpkin","A3L_Sunflower","Oleander2"]) then {
 	// It's a plant!
@@ -43,6 +51,11 @@ if (typeOf _curTarget IN ["A3L_Wheat","A3L_Corn","A3L_Beans","A3L_Cannabis","A3L
 	[] call fnc_harvest;
 };
 
+if (typeOf _curTarget IN  animalArray) then {
+	// It's a fahking animal!
+	_animal = typeOf _curTarget;
+	[_animal,_curTarget] spawn fnc_gutanimal;
+};
 
 //If target is a player then check if we can use the cop menu.
 if(isPlayer _curTarget && _curTarget isKindOf "Man") then {

@@ -39,26 +39,17 @@ _units = _units - [player];
 		if(count _sPos > 1 && {_distance < 15}) then {
 			_text = switch (true) do {
 				case ((typeOf _x == "Land_Suitcase_F") && (!isNil {(_x getVariable "pickup")})): {format["<t color='#00FF00' font='EtelkaNarrowMediumPro'>%1</t>","Bank money"];};
-				case (_x in (units grpPlayer) && playerSide == civilian && (!(goggles _x IN ["A3L_Balaclava"]))): {format["<t color='#00FF00' font='EtelkaNarrowMediumPro'>%1</t>",(_x getVariable ["realname",name _x])];};
-				case (goggles _x IN ["A3L_Balaclava"]): {format["<t color='#00FF00' font='EtelkaNarrowMediumPro'>Masked Person</t>"];};
-				case (!isNil {(_x getVariable "rank")}): {format["<img image='%1' size='1'></img> <t color='#00FF00' font='EtelkaNarrowMediumPro'> %2 </t>",switch ((_x getVariable "rank")) do { // THIS IS FOR PLAYERS?
-					case 2: {"\a3\ui_f\data\gui\cfg\Ranks\corporal_gs.paa"}; 
-					case 3: {"\a3\ui_f\data\gui\cfg\Ranks\sergeant_gs.paa"};
-					case 4: {"\a3\ui_f\data\gui\cfg\Ranks\lieutenant_gs.paa"};
-					case 5: {"\a3\ui_f\data\gui\cfg\Ranks\captain_gs.paa"};
-					case 6: {"\a3\ui_f\data\gui\cfg\Ranks\major_gs.paa"};
-					case 7: {"\a3\ui_f\data\gui\cfg\Ranks\colonel_gs.paa"};
-					case 8: {"\a3\ui_f\data\gui\cfg\Ranks\general_gs.paa"};
-					default {"\a3\ui_f\data\gui\cfg\Ranks\private_gs.paa"};
-					},_x getVariable ["realname",name _x]]};
+				case (_x in (units grpPlayer) && playerSide == civilian && (!(goggles _x IN ["A3L_Balaclava","G_Balaclava_blk","G_Balaclava_combat","G_Balaclava_lowprofile"]))): {format["<t color='#00FF00' font='EtelkaNarrowMediumPro'>%1</t>",(_x getVariable ["realname",name _x])];};
+				case (goggles _x IN ["A3L_Balaclava","G_Balaclava_blk","G_Balaclava_combat","G_Balaclava_lowprofile"]): {format["<t color='#00FF00' font='EtelkaNarrowMediumPro'>Masked Person</t>"];};
+				case (!isNil {(_x getVariable "rank")}): {format["<t color='#00FF00' font='EtelkaNarrowMediumPro'> %1 </t>",_x getVariable ["realname",name _x]]};
 				case ((!isNil {_x getVariable "name"} && playerSide == independent)): {format["<t color='#FF0000'><img image='a3\ui_f\data\map\MapControl\hospital_ca.paa' size='1.5'></img></t> <t font='EtelkaNarrowMediumPro'> %1 </t>",_x getVariable ["name","Unknown Player"]]};
 				default {
-					if((!isNil {(group _x) getVariable "gang_name"}) && (!(goggles _x IN ["A3L_Balaclava"]))) then {
+					if((!isNil {(group _x) getVariable "gang_name"}) && (!(goggles _x IN ["A3L_Balaclava","G_Balaclava_blk","G_Balaclava_combat","G_Balaclava_lowprofile"]))) then {
 						format["<t color='#00FF00' font='EtelkaNarrowMediumPro'>%1</t><br/><t size='0.8' font='EtelkaNarrowMediumPro' color='#B6B6B6'>%2</t>",_x getVariable ["realname",name _x],(group _x) getVariable ["gang_name",""]];
 					} 
 					else 
 					{
-						if (goggles _x IN ["A3L_Balaclava"]) then 
+						if (goggles _x IN ["A3L_Balaclava","G_Balaclava_blk","G_Balaclava_combat","G_Balaclava_lowprofile"]) then 
 							{
 							format["<t color='#00FF00' font='EtelkaNarrowMediumPro'>Masked Person</t>"];
 							} else 
