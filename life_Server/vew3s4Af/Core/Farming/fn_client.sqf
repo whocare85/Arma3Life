@@ -13,7 +13,7 @@ _plants_array = [
 ["Ficus_Bush_1",2,"olive",1,"A3L_Seed_wheat"],
 ["A3L_Pumpkin",0,"pumpkin",1,"A3L_Seed_Pumpkin"],
 ["A3L_Sunflower",0,"sunflower",1,"A3L_Seed_sunflower"],
-["Oleander2",2,"poppy",1,"A3L_Seed_poppy"]
+["Oleander2",2,"opium",1,"A3L_Seed_poppy"]
 ];
 _player = player;
 _plant = cursortarget;
